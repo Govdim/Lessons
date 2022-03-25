@@ -18,6 +18,7 @@ namespace Lab1{
             book3.Show();
             */
 
+            /*
             Triangle triangle = new Triangle(1, 2, 2);
             triangle.ShowSides();
 
@@ -27,6 +28,21 @@ namespace Lab1{
             } else {
                 Console.WriteLine("Треугольника с такими сторонами не существует!");
             }
+            */
+
+            /*
+            Money money = new Money(100, 8);
+            money.Show();
+            Console.WriteLine(" Общая сумма: " + money.Sum);
+
+            int price = 350;
+            if(money.Enough(price)){
+                Console.WriteLine("Денег достаточно для покупки товара на сумму " + price);
+                Console.WriteLine("На эту сумму можно купить " + money.GetCountGoods(price) + " единиц товара");
+            } else {
+                Console.WriteLine("Денег недостаточно для покупки товара на сумму " + price);
+            }
+            */
         }
     }
 }
