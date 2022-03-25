@@ -4,6 +4,7 @@ namespace Lab1{
     class Program{
 
         static void Main(){
+            /*
             Book book1 = new Book();
             book1.SetBook("Пушкин А.С.", "Капитанская дочка", "Вильямс", 123, 2012);
             Book.SetPrice(12);
@@ -15,6 +16,17 @@ namespace Lab1{
 
             Book book3 = new Book("Лермонтов М.Ю.", "Мцыри");
             book3.Show();
+            */
+
+            Triangle triangle = new Triangle(1, 2, 2);
+            triangle.ShowSides();
+
+            if(triangle.Exists()){
+                Console.WriteLine(" Периметр: " + triangle.GetPerimeter());
+                Console.WriteLine(" Площадь: " + triangle.GetArea());
+            } else {
+                Console.WriteLine("Треугольника с такими сторонами не существует!");
+            }
         }
     }
 }
