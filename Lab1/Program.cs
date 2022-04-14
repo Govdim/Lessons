@@ -4,7 +4,6 @@ namespace Lab1{
     class Program{
 
         static void Main(){
-            /*
             Book book1 = new Book();
             book1.SetBook("Пушкин А.С.", "Капитанская дочка", "Вильямс", 123, 2012);
             Book.SetPrice(12);
@@ -16,9 +15,9 @@ namespace Lab1{
 
             Book book3 = new Book("Лермонтов М.Ю.", "Мцыри");
             book3.Show();
-            */
-
-            /*
+            
+            
+            
             Triangle triangle = new Triangle(1, 2, 2);
             triangle.ShowSides();
 
@@ -28,9 +27,9 @@ namespace Lab1{
             } else {
                 Console.WriteLine("Треугольника с такими сторонами не существует!");
             }
-            */
-
-            /*
+            
+            
+            
             Money money = new Money(100, 8);
             money.Show();
             Console.WriteLine(" Общая сумма: " + money.Sum);
@@ -42,7 +41,6 @@ namespace Lab1{
             } else {
                 Console.WriteLine("Денег недостаточно для покупки товара на сумму " + price);
             }
-            */
         }
     }
 }
