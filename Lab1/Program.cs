@@ -41,6 +41,8 @@ namespace Lab1{
             } else {
                 Console.WriteLine("Денег недостаточно для покупки товара на сумму " + price);
             }
+
+            Console.ReadLine();
         }
     }
 }
