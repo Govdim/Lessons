@@ -10,6 +10,10 @@ public class Staff{
     public static void Dimon(){
         Console.WriteLine("Димооооон!!!");
     }
+
+    public static void TuTuTu(){
+        Console.WriteLine("Ту-ту-ту-ту-ту");
+    }
     
     public Staff(){
         workers = new List<Worker>();

@@ -27,6 +27,7 @@ namespace Lab5{
             
             Staff staff = new Staff();
             Staff.DismissDimon += Staff.Dimon;
+            Staff.DismissDimon += Staff.TuTuTu;
             
             Admin admin = new Admin("Алексей", "Захаров");
             Engineer engineer1 = new Engineer("Дмитрий", "Комаров");
