@@ -1,8 +1,9 @@
-﻿namespace Lab4.Progression;
+﻿namespace Lab4.Progression{
+    
+    public interface IProgression{
 
-public interface IProgression{
+        int GetElement(int k);
 
-    public int GetElement(int k);
-
-    public int SumElement(int k);
+        int SumElement(int k);
+    }
 }

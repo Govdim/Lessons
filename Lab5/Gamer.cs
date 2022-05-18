@@ -1,32 +1,34 @@
-﻿namespace Lab5;
+﻿using System;
 
-public class Gamer{
+namespace Lab5{
+    public class Gamer{
     
-    string name;
-    Dice dice;
+        string name;
+        Dice dice;
 
-    public delegate void BingoDelegate();
-    public static event BingoDelegate Bingo;
+        public delegate void BingoDelegate();
+        public static event BingoDelegate Bingo;
     
-    public Gamer(string name){
-        this.name = name;
-        dice = new Dice();
-    }
-    
-    public int SeansGame(){
-        int point = dice.Roll();
-        if(point == 6){
-            Bingo();
+        public Gamer(string name){
+            this.name = name;
+            dice = new Dice();
         }
-        
-        return point;
-    }
-
-    public static void ShowBingo(){
-        Console.WriteLine("Бинго! 6 очков!");
-    }
     
-    public override string ToString(){
-        return name;
+        public int SeansGame(){
+            int point = dice.Roll();
+            if(point == 6){
+                Bingo();
+            }
+        
+            return point;
+        }
+
+        public static void ShowBingo(){
+            Console.WriteLine("Бинго! 6 очков!");
+        }
+    
+        public override string ToString(){
+            return name;
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Lab4.Progression;
+﻿using System;
+using Lab4.Progression;
 
 namespace Lab4{
     class Program{

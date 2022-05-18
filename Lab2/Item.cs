@@ -1,40 +1,43 @@
-﻿namespace Lab2;
+﻿using System;
 
-public abstract class Item{
+namespace Lab2{
     
-    protected long invNumber;
-    protected bool taken;
+    public abstract class Item{
     
-    public Item(){
-        taken = true;
-    }
+        protected long invNumber;
+        protected bool taken;
     
-    public Item(long invNumber, bool taken){
-        this.invNumber = invNumber;
-        this.taken = taken;
-    }
+        public Item(){
+            taken = true;
+        }
     
-    public bool IsAvailable(){
-        return taken;
-    }
+        public Item(long invNumber, bool taken){
+            this.invNumber = invNumber;
+            this.taken = taken;
+        }
     
-    public long GetInvNumber(){
-        return invNumber;
-    }
+        public bool IsAvailable(){
+            return taken;
+        }
     
-    private void Take(){
-        taken = false;
-    }
+        public long GetInvNumber(){
+            return invNumber;
+        }
+    
+        private void Take(){
+            taken = false;
+        }
 
-    public abstract void Return();
+        public abstract void Return();
 
-    public virtual void Show(){
-        Console.WriteLine("Состояние единицы хранения:\n Инвентарный номер: " + invNumber +"\n Наличие: " + taken);
-    }
+        public virtual void Show(){
+            Console.WriteLine("Состояние единицы хранения:\n Инвентарный номер: " + invNumber +"\n Наличие: " + taken);
+        }
     
-    public void TakeItem(){
-        if(IsAvailable()){
-            Take();
+        public void TakeItem(){
+            if(IsAvailable()){
+                Take();
+            }
         }
     }
 }

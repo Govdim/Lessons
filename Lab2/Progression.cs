@@ -1,8 +1,9 @@
-﻿namespace Lab2;
+﻿namespace Lab2{
+    
+    public abstract class Progression{
 
-public abstract class Progression{
+        public abstract int GetElement(int k);
 
-    public abstract int GetElement(int k);
-
-    public abstract int SumElement(int k);
+        public abstract int SumElement(int k);
+    }
 }

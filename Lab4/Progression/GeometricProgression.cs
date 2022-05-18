@@ -1,32 +1,33 @@
-﻿namespace Lab4.Progression;
-
-public class GeometricProgression : IProgression{
+﻿namespace Lab4.Progression{
     
-    private int b;
-    private int q;
+    public class GeometricProgression : IProgression{
+    
+        private int b;
+        private int q;
 
-    public GeometricProgression(int b, int q){
-        this.b = b;
-        this.q = q;
-    }
-
-    public int GetElement(int k){
-        int element = b;
-
-        for(int i = 1; i < k; i++){
-            element *= q;
+        public GeometricProgression(int b, int q){
+            this.b = b;
+            this.q = q;
         }
 
-        return element;
-    }
-    
-    public int SumElement(int k){
-        int sum = 0;
+        public int GetElement(int k){
+            int element = b;
 
-        for(int i = 1; i <= k; i++){
-            sum += GetElement(i);
+            for(int i = 1; i < k; i++){
+                element *= q;
+            }
+
+            return element;
         }
+    
+        public int SumElement(int k){
+            int sum = 0;
+
+            for(int i = 1; i <= k; i++){
+                sum += GetElement(i);
+            }
         
-        return sum;
+            return sum;
+        }
     }
 }

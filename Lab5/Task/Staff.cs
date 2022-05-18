@@ -1,44 +1,48 @@
-﻿namespace Lab5.Task;
+﻿using System;
+using System.Collections.Generic;
 
-public class Staff{
-
-    private List<Worker> workers;
-
-    public delegate void DismissDelegate();
-    public static event DismissDelegate DismissDimon;
-
-    public static void Dimon(){
-        Console.WriteLine("Димооооон!!!");
-    }
-
-    public static void TuTuTu(){
-        Console.WriteLine("Ту-ту-ту-ту-ту");
-    }
+namespace Lab5.Task{
     
-    public Staff(){
-        workers = new List<Worker>();
-    }
+    public class Staff{
 
-    public void Hire(Worker worker){
-        workers.Add(worker);
-        
-        Console.WriteLine(worker.GetName() + " " + worker.GetSurName() + " нанят на должность - " + worker.GetJobName());
-    }
+        private List<Worker> workers;
 
-    public void Dismiss(Worker worker){
-        workers.Remove(worker);
-        Console.WriteLine(worker.GetName() + " " + worker.GetSurName() + " уволен");
+        public delegate void DismissDelegate();
+        public static event DismissDelegate DismissDimon;
 
-        if(worker.GetName() == "Дмитрий"){
-            DismissDimon();
+        public static void Dimon(){
+            Console.WriteLine("Димооооон!!!");
         }
-    }
 
-    public void Show(){
-        Console.WriteLine("Работники:");
+        public static void TuTuTu(){
+            Console.WriteLine("Ту-ту-ту-ту-ту");
+        }
+    
+        public Staff(){
+            workers = new List<Worker>();
+        }
 
-        foreach(Worker worker in workers){
-            Console.WriteLine("  " + worker.GetName() + " " + worker.GetSurName() + " - должность: " + worker.GetJobName());
+        public void Hire(Worker worker){
+            workers.Add(worker);
+        
+            Console.WriteLine(worker.GetName() + " " + worker.GetSurName() + " нанят на должность - " + worker.GetJobName());
+        }
+
+        public void Dismiss(Worker worker){
+            workers.Remove(worker);
+            Console.WriteLine(worker.GetName() + " " + worker.GetSurName() + " уволен");
+
+            if(worker.GetName() == "Дмитрий"){
+                DismissDimon();
+            }
+        }
+
+        public void Show(){
+            Console.WriteLine("Работники:");
+
+            foreach(Worker worker in workers){
+                Console.WriteLine("  " + worker.GetName() + " " + worker.GetSurName() + " - должность: " + worker.GetJobName());
+            }
         }
     }
 }

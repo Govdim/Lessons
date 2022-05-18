@@ -1,22 +1,23 @@
-﻿namespace Lab5.Task;
-
-public abstract class Worker{
-
-    private string name;
-    private string surname;
+﻿namespace Lab5.Task{
     
-    public Worker(string name, string surname){
-        this.name = name;
-        this.surname = surname;
-    }
+    public abstract class Worker{
 
-    public string GetName(){
-        return name;
-    }
+        private string name;
+        private string surname;
+    
+        public Worker(string name, string surname){
+            this.name = name;
+            this.surname = surname;
+        }
 
-    public string GetSurName(){
-        return surname;
-    }
+        public string GetName(){
+            return name;
+        }
 
-    public abstract string GetJobName();
+        public string GetSurName(){
+            return surname;
+        }
+
+        public abstract string GetJobName();
+    }
 }

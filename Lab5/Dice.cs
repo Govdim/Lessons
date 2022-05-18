@@ -1,14 +1,17 @@
-﻿namespace Lab5;
+﻿using System;
 
-public class Dice{
+namespace Lab5{
     
-    private Random random;
+    public class Dice{
     
-    public Dice(){
-        random = new Random();
-    }
+        private Random random;
     
-    public int Roll(){
-        return random.Next(6) + 1;
+        public Dice(){
+            random = new Random();
+        }
+    
+        public int Roll(){
+            return random.Next(6) + 1;
+        }
     }
 }

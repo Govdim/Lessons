@@ -1,8 +1,9 @@
-﻿namespace Lab4;
-
-public interface IPubs{
+﻿namespace Lab4{
     
-    bool IfSubs { get; set;}
+    public interface IPubs{
     
-    void Subs();
+        bool IfSubs { get; set;}
+    
+        void Subs();
+    }
 }

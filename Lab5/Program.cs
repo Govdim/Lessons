@@ -1,4 +1,5 @@
-﻿using Lab5.Task;
+﻿using System;
+using Lab5.Task;
 
 namespace Lab5{
     class Program{

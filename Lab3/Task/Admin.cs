@@ -1,12 +1,13 @@
-﻿namespace Lab3.Task;
-
-public class Admin : Worker{
+﻿namespace Lab3.Task{
     
-    public Admin(string name, string surname) : base(name, surname){
+    public class Admin : Worker{
+    
+        public Admin(string name, string surname) : base(name, surname){
         
-    }
+        }
     
-    public override string GetJobName(){
-        return "Администратор";
+        public override string GetJobName(){
+            return "Администратор";
+        }
     }
 }

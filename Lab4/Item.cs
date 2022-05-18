@@ -1,53 +1,56 @@
-﻿namespace Lab4;
+﻿using System;
 
-public abstract class Item : IComparable{
+namespace Lab4{
     
-    protected long invNumber;
-    protected bool taken;
+    public abstract class Item : IComparable{
     
-    public Item(){
-        taken = true;
-    }
+        protected long invNumber;
+        protected bool taken;
     
-    public Item(long invNumber, bool taken){
-        this.invNumber = invNumber;
-        this.taken = taken;
-    }
-    
-    public bool IsAvailable(){
-        return taken;
-    }
-    
-    public long GetInvNumber(){
-        return invNumber;
-    }
-    
-    private void Take(){
-        taken = false;
-    }
-
-    public abstract void Return();
-
-    public virtual void Show(){
-        Console.WriteLine("Состояние единицы хранения:\n Инвентарный номер: " + invNumber +"\n Наличие: " + taken);
-    }
-    
-    public void TakeItem(){
-        if(IsAvailable()){
-            Take();
+        public Item(){
+            taken = true;
         }
-    }
+    
+        public Item(long invNumber, bool taken){
+            this.invNumber = invNumber;
+            this.taken = taken;
+        }
+    
+        public bool IsAvailable(){
+            return taken;
+        }
+    
+        public long GetInvNumber(){
+            return invNumber;
+        }
+    
+        private void Take(){
+            taken = false;
+        }
 
-    public int CompareTo(object? obj){
-        Item it = (Item) obj;
+        public abstract void Return();
+
+        public virtual void Show(){
+            Console.WriteLine("Состояние единицы хранения:\n Инвентарный номер: " + invNumber +"\n Наличие: " + taken);
+        }
+    
+        public void TakeItem(){
+            if(IsAvailable()){
+                Take();
+            }
+        }
+
+        public int CompareTo(object obj){
+            Item it = (Item) obj;
         
-        if(this.invNumber == it.invNumber){
-            return 0;
-        }
-        if(this.invNumber > it.invNumber){
-            return 1;
-        }
+            if(this.invNumber == it.invNumber){
+                return 0;
+            }
+            if(this.invNumber > it.invNumber){
+                return 1;
+            }
         
-        return -1;
+            return -1;
+        }
     }
 }

@@ -1,32 +1,35 @@
-﻿namespace Lab2;
+﻿using System;
 
-public class Magazine : Item{
+namespace Lab2{
     
-    private string volume;
-    private int number;
-    private string title;
-    private int year;
+    public class Magazine : Item{
     
-    public Magazine(){
+        private string volume;
+        private int number;
+        private string title;
+        private int year;
+    
+        public Magazine(){
         
-    }
+        }
     
-    public Magazine(string volume, int number, string title, int year,
-        long invNumber, bool taken) : base(invNumber, taken){
+        public Magazine(string volume, int number, string title, int year,
+            long invNumber, bool taken) : base(invNumber, taken){
         
-        this.volume = volume;
-        this.number = number;
-        this.title = title;
-        this.year = year;
-    }
+            this.volume = volume;
+            this.number = number;
+            this.title = title;
+            this.year = year;
+        }
     
-    public override void Return(){
-        taken = true;
-    }
+        public override void Return(){
+            taken = true;
+        }
     
-    public override void Show(){
-        Console.WriteLine("\nЖурнал:\n Том: " + volume + "\n Номер: " + number + 
-                          "\n Название: " + title + "\n Год выпуска: " + year);
-        base.Show();
+        public override void Show(){
+            Console.WriteLine("\nЖурнал:\n Том: " + volume + "\n Номер: " + number + 
+                              "\n Название: " + title + "\n Год выпуска: " + year);
+            base.Show();
+        }
     }
 }

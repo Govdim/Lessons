@@ -1,4 +1,5 @@
-﻿using Lab3.Task;
+﻿using System;
+using Lab3.Task;
 
 namespace Lab3{
     class Program{
