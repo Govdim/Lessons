@@ -65,7 +65,7 @@ namespace Lab6{
             pictureBox.Image = buffer;
         }
         
-        private void pictureBox_MouseDown(object sender, MouseEventArgs e){
+        private void pictureBox_MouseClick(object sender, MouseEventArgs e){
             if(e.Button == MouseButtons.Right){
                 graphics.Clear(Color.White);
                 pictureBox.Image = buffer;
@@ -80,11 +80,7 @@ namespace Lab6{
                 pen.Color = colorDialog.Color;
             }
         }
-        
-        private void depthMenu_Click(object sender, EventArgs e){
-            
-        }
-        
+
         private void toolStripMenuItem1_Click(object sender, EventArgs e){
             _tool = 1;
         }

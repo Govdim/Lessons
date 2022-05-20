@@ -57,7 +57,7 @@ namespace Lab6{
             this.pictureBox.Size = new System.Drawing.Size(776, 393);
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
-            this.pictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseDown);
+            this.pictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseClick);
             this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseMove);
             // 
             // menuStrip
@@ -159,7 +159,6 @@ namespace Lab6{
             this.depthMenu.Name = "depthMenu";
             this.depthMenu.Size = new System.Drawing.Size(70, 20);
             this.depthMenu.Text = "Толщина";
-            this.depthMenu.Click += new System.EventHandler(this.depthMenu_Click);
             // 
             // depthMenu1
             // 
