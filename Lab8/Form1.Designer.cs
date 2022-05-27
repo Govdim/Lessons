@@ -39,10 +39,10 @@
             this.labelOrder = new System.Windows.Forms.Label();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.menuFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.openKitchen = new System.Windows.Forms.ToolStripMenuItem();
             this.menuKitchen = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.statusKitchen = new System.Windows.Forms.ToolStripStatusLabel();
-            this.openKitchen = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenu.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -170,6 +170,13 @@
             this.menuFile.Size = new System.Drawing.Size(48, 20);
             this.menuFile.Text = "Файл";
             // 
+            // openKitchen
+            // 
+            this.openKitchen.Name = "openKitchen";
+            this.openKitchen.Size = new System.Drawing.Size(159, 22);
+            this.openKitchen.Text = "Открыть кухню";
+            this.openKitchen.Click += new System.EventHandler(this.openKitchen_Click);
+            // 
             // menuKitchen
             // 
             this.menuKitchen.Name = "menuKitchen";
@@ -189,15 +196,8 @@
             // statusKitchen
             // 
             this.statusKitchen.Name = "statusKitchen";
-            this.statusKitchen.Size = new System.Drawing.Size(10, 17);
-            this.statusKitchen.Text = " ";
-            // 
-            // openKitchen
-            // 
-            this.openKitchen.Name = "openKitchen";
-            this.openKitchen.Size = new System.Drawing.Size(159, 22);
-            this.openKitchen.Text = "Открыть кухню";
-            this.openKitchen.Click += new System.EventHandler(this.openKitchen_Click);
+            this.statusKitchen.Size = new System.Drawing.Size(106, 17);
+            this.statusKitchen.Text = "Кухня не выбрана";
             // 
             // Form1
             // 
